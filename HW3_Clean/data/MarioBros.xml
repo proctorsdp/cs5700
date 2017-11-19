@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<drawing>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>BINARY</lineType>
+        <startLocation>
+            <x>265.5</x>
+            <y>258.0</y>
+        </startLocation>
+        <endLocation>
+            <x>557.5</x>
+            <y>271.5</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>BINARY</lineType>
+        <startLocation>
+            <x>557.5</x>
+            <y>271.5</y>
+        </startLocation>
+        <endLocation>
+            <x>562.5</x>
+            <y>482.0</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>BINARY</lineType>
+        <startLocation>
+            <x>265.5</x>
+            <y>258.0</y>
+        </startLocation>
+        <endLocation>
+            <x>272.5</x>
+            <y>473.0</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>DEPENDENCY</lineType>
+        <startLocation>
+            <x>265.5</x>
+            <y>258.0</y>
+        </startLocation>
+        <endLocation>
+            <x>562.5</x>
+            <y>482.0</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Mario</name>
+        <size>
+            <height>140.0</height>
+            <width>121.0</width>
+        </size>
+        <location>
+            <x>205.0</x>
+            <y>188.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Luigi</name>
+        <size>
+            <height>128.0</height>
+            <width>117.0</width>
+        </size>
+        <location>
+            <x>214.0</x>
+            <y>409.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Peach</name>
+        <size>
+            <height>147.0</height>
+            <width>119.0</width>
+        </size>
+        <location>
+            <x>498.0</x>
+            <y>198.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Bowser</name>
+        <size>
+            <height>140.0</height>
+            <width>117.0</width>
+        </size>
+        <location>
+            <x>504.0</x>
+            <y>412.0</y>
+        </location>
+    </element>
+</drawing>

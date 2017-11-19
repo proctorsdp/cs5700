@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<drawing>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>BINARY</lineType>
+        <startLocation>
+            <x>247.0</x>
+            <y>183.5</y>
+        </startLocation>
+        <endLocation>
+            <x>629.0</x>
+            <y>247.5</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>AGGREGATION</lineType>
+        <startLocation>
+            <x>251.5</x>
+            <y>600.0</y>
+        </startLocation>
+        <endLocation>
+            <x>696.0</x>
+            <y>633.0</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>DEPENDENCY</lineType>
+        <startLocation>
+            <x>247.0</x>
+            <y>183.5</y>
+        </startLocation>
+        <endLocation>
+            <x>251.5</x>
+            <y>600.0</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>New Class</name>
+        <size>
+            <height>185.0</height>
+            <width>150.0</width>
+        </size>
+        <location>
+            <x>172.0</x>
+            <y>91.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Class</name>
+        <size>
+            <height>172.0</height>
+            <width>161.0</width>
+        </size>
+        <location>
+            <x>171.0</x>
+            <y>514.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Class</name>
+        <size>
+            <height>186.0</height>
+            <width>144.0</width>
+        </size>
+        <location>
+            <x>624.0</x>
+            <y>540.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Class</name>
+        <size>
+            <height>191.0</height>
+            <width>166.0</width>
+        </size>
+        <location>
+            <x>546.0</x>
+            <y>152.0</y>
+        </location>
+    </element>
+</drawing>

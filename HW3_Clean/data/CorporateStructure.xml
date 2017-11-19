@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<drawing>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>BINARY</lineType>
+        <startLocation>
+            <x>383.5</x>
+            <y>571.0</y>
+        </startLocation>
+        <endLocation>
+            <x>587.0</x>
+            <y>575.5</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>COMPOSITION</lineType>
+        <startLocation>
+            <x>587.0</x>
+            <y>575.5</y>
+        </startLocation>
+        <endLocation>
+            <x>583.5</x>
+            <y>353.5</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>DEPENDENCY</lineType>
+        <startLocation>
+            <x>583.5</x>
+            <y>353.5</y>
+        </startLocation>
+        <endLocation>
+            <x>580.5</x>
+            <y>100.0</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="relationshipLine">
+        <description>Relationship</description>
+        <lineType>BINARY</lineType>
+        <startLocation>
+            <x>383.5</x>
+            <y>571.0</y>
+        </startLocation>
+        <endLocation>
+            <x>583.5</x>
+            <y>353.5</y>
+        </endLocation>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Person</name>
+        <size>
+            <height>154.0</height>
+            <width>143.0</width>
+        </size>
+        <location>
+            <x>312.0</x>
+            <y>494.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Employees</name>
+        <size>
+            <height>155.0</height>
+            <width>151.0</width>
+        </size>
+        <location>
+            <x>508.0</x>
+            <y>276.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Company</name>
+        <size>
+            <height>176.0</height>
+            <width>135.0</width>
+        </size>
+        <location>
+            <x>513.0</x>
+            <y>12.0</y>
+        </location>
+    </element>
+    <element xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="classBox">
+        <description>Class</description>
+        <name>Boss</name>
+        <size>
+            <height>191.0</height>
+            <width>136.0</width>
+        </size>
+        <location>
+            <x>519.0</x>
+            <y>480.0</y>
+        </location>
+    </element>
+</drawing>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.input.KeyCodeCombination?>
+
+<MenuBar xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.MenuBar">
+   <menus>
+      <Menu mnemonicParsing="false" text="File">
+         <items>
+            <MenuItem fx:id="newOption" mnemonicParsing="false" text="New">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="N" control="UP" meta="DOWN" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+            <MenuItem fx:id="openOption" mnemonicParsing="false" text="Open">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="O" control="UP" meta="DOWN" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+            <MenuItem fx:id="saveOption" mnemonicParsing="false" text="Save">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="S" control="UP" meta="DOWN" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+            <MenuItem fx:id="saveAsOption" mnemonicParsing="false" text="Save As">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="S" control="UP" meta="DOWN" shift="DOWN" shortcut="UP" />
+               </accelerator>
+            </MenuItem>
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Edit">
+         <items>
+            <MenuItem fx:id="undoOption" mnemonicParsing="false" text="Undo">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="Z" control="UP" meta="DOWN" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+            <MenuItem fx:id="redoOption" mnemonicParsing="false" text="Redo">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="Z" control="UP" meta="DOWN" shift="DOWN" shortcut="UP" />
+               </accelerator></MenuItem>
+            <MenuItem fx:id="deleteOption" mnemonicParsing="false" text="Delete">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="BACK_SPACE" control="UP" meta="DOWN" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Class">
+         <items>
+            <MenuItem fx:id="copyOption" mnemonicParsing="false" text="Copy Class">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="C" control="UP" meta="DOWN" shift="UP" shortcut="UP" />
+               </accelerator>
+            </MenuItem>
+            <MenuItem fx:id="pasteOption" mnemonicParsing="false" text="Paste Class">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="V" control="UP" meta="DOWN" shift="UP" shortcut="UP" />
+               </accelerator>
+            </MenuItem>
+            <MenuItem fx:id="colorOption" mnemonicParsing="false" text="Change Color">
+               <accelerator>
+                  <KeyCodeCombination alt="UP" code="P" control="UP" meta="DOWN" shift="UP" shortcut="UP" />
+               </accelerator></MenuItem>
+         </items>
+      </Menu>
+   </menus>
+</MenuBar>
