@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="130.0" spacing="5.0" style="-fx-background-color: lightgrey; -fx-border-color: grey;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Separator prefWidth="200.0" />
+      <ToggleButton fx:id="editBtn" mnemonicParsing="false" onAction="#enterEditMode_OnAction" prefHeight="45.0" prefWidth="110.0" text="Edit Mode">
+         <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup" />
+         </toggleGroup>
+      </ToggleButton>
+      <Separator prefWidth="200.0" />
+      <ToggleButton fx:id="newClassBtn" onAction="#enterNewClassMode_OnAction" prefHeight="45.0" prefWidth="110.0" selected="true" text="New Class" toggleGroup="$toggleGroup" />
+      <Separator prefWidth="200.0" />
+      <ToggleButton fx:id="binaryLineBtn" onAction="#enterBinaryLineMode_OnAction" prefHeight="45.0" prefWidth="110.0" text="Binary Association" textAlignment="CENTER" toggleGroup="$toggleGroup" wrapText="true" />
+      <ToggleButton fx:id="generalizationLineBtn" prefHeight="45.0" prefWidth="110.0" text="Generalization/Specialization" textAlignment="CENTER" toggleGroup="$toggleGroup" wrapText="true" />
+      <ToggleButton fx:id="dependancyLineBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="110.0" text="Dependency" textAlignment="CENTER" toggleGroup="$toggleGroup" wrapText="true" />
+      <ToggleButton fx:id="aggregationLineBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="110.0" text="Aggregation" textAlignment="CENTER" toggleGroup="$toggleGroup" wrapText="true" />
+      <ToggleButton fx:id="compositionLineBtn" mnemonicParsing="false" prefHeight="45.0" prefWidth="110.0" text="Composition" textAlignment="CENTER" toggleGroup="$toggleGroup" wrapText="true" />
+      <Separator prefWidth="200.0" />
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Rectangle?>
+
+
+<StackPane fx:id="labeledBoxPane" onMouseDragged="#moveBox" prefHeight="50.0" prefWidth="200.0" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.drawingComponents.LabeledBox">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="200.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="3.0" width="200.0" />
+      <TextField fx:id="label" alignment="CENTER" onKeyPressed="#saveLabel" prefHeight="50.0" style="-fx-background-color: dodgerblue; -fx-border-color: black; -fx-border-width: 3;" text="Class" StackPane.alignment="TOP_CENTER">
+         <StackPane.margin>
+            <Insets />
+         </StackPane.margin>
+      </TextField>
+   </children>
+</StackPane>

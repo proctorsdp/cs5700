@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+
+
+<MenuBar xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <menus>
+      <Menu mnemonicParsing="false" text="File">
+         <items>
+            <MenuItem fx:id="newOption" mnemonicParsing="false" onAction="#createNewFile_OnAction" text="New" />
+            <MenuItem fx:id="openOption" mnemonicParsing="false" onAction="#openFile_OnAction" text="Open" />
+            <MenuItem fx:id="saveOption" mnemonicParsing="false" onAction="#saveFile_OnAction" text="Save" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Edit">
+         <items>
+            <MenuItem fx:id="undoOption" mnemonicParsing="false" onAction="#undoCommand_OnAction" text="Undo" />
+            <MenuItem fx:id="redoOption" mnemonicParsing="false" onAction="#redoCommand_OnAction" text="Redo" />
+         </items>
+      </Menu>
+      <Menu mnemonicParsing="false" text="Help">
+         <items>
+            <MenuItem mnemonicParsing="false" text="About" />
+         </items>
+      </Menu>
+   </menus>
+</MenuBar>
