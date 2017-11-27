@@ -2,6 +2,8 @@ package cs5700.hw4.sudoku;
 
 import java.util.ArrayList;
 import java.util.Iterator;
+import java.util.LinkedHashSet;
+import java.util.LinkedList;
 
 public abstract class Group {
 
@@ -13,32 +15,19 @@ public abstract class Group {
 
     private boolean onlyOnePossible = false;
 
-    public Group(ArrayList<Cell> group) {
+    public Group(LinkedHashSet group) {
         this.size = group.size();
-        this.cellGroup = group;
-        this.possibleSymbols = (ArrayList<String>) Board.getInstance().getSymbols().clone();
+        this.cellGroup = new ArrayList<>();
+        this.cellGroup.addAll(group);
+        this.possibleSymbols = Board.getInstance().getSymbols();
         updatePossibilities();
-    }
-
-    abstract String groupFormat(int i);
-
-    public int numEmptyCells() {
-        int emptyCells = 0;
-        for (Cell c: cellGroup) {
-            if (c.isEmpty()) {
-                emptyCells++;
-            }
-        }
-        return emptyCells;
     }
 
     public int getSize() {
         return size;
     }
 
-    public Iterator getIterator() { return cellGroup.iterator(); }
-
-    public <T> boolean contains(T symbol) {
+    public boolean contains(String symbol) {
         for (int i = 0; i < size; i++) {
             if (cellGroup.get(i).getSymbol().equals(symbol)) {
                 return true;
@@ -56,23 +45,40 @@ public abstract class Group {
     }
 
     public void updatePossibilities() {
+        possibleSymbols = Board.getInstance().getSymbols();
         for (Cell c : cellGroup) {
             if (!c.isEmpty()) {
                 possibleSymbols.remove(c.getSymbol());
             }
         }
 
-        if (possibleSymbols.size() == 1) { onlyOnePossible = true; }
-
-        for (Cell c : cellGroup) {
-            if (c.isEmpty()) {
-                c.addPossibleSymbol(possibleSymbols);
-            }
+        if (possibleSymbols.size() == 1) {
+            onlyOnePossible = true;
         }
     }
 
     public boolean isOnlyOnePossible() {
         return onlyOnePossible;
+    }
+
+    public String getPossibleSymbol() {
+        if (possibleSymbols.isEmpty()) {
+            return null;
+        } else {
+            return possibleSymbols.remove(0);
+        }
+    }
+
+    public ArrayList<String> getPossibleSymbols() { return possibleSymbols; }
+
+    public ArrayList<String> getCurrentSymbols() {
+        ArrayList<String> currentSymbols = new ArrayList<>();
+        for (int i = 0; i < size; i++) {
+            if (!cellGroup.get(i).isEmpty()) {
+                currentSymbols.add(cellGroup.get(i).getSymbol());
+            }
+        }
+        return currentSymbols;
     }
 
     @Override
@@ -84,4 +90,6 @@ public abstract class Group {
         }
         return group.toString();
     }
+
+    abstract String groupFormat(int i);
 }

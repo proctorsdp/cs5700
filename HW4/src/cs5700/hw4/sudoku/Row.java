@@ -1,12 +1,12 @@
 package cs5700.hw4.sudoku;
 
-import java.util.ArrayList;
+import java.util.LinkedHashSet;
 
 public class Row extends Group {
 
     private int rowIndex;
 
-    public Row(ArrayList<Cell> row, int rowIndex) {
+    public Row(LinkedHashSet row, int rowIndex) {
         super(row);
         this.rowIndex = rowIndex;
     }

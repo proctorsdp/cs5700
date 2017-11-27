@@ -1,11 +1,12 @@
 package cs5700.hw4.sudoku;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
-import java.util.LinkedList;
+import java.util.Objects;
 
 public class Cell {
 
-    private LinkedList<String> possibleSymbols = new LinkedList<>();
+    private ArrayList<String> possibleSymbols = new ArrayList<>();
 
     private boolean isEmpty = true;
 
@@ -21,11 +22,10 @@ public class Cell {
     }
 
     public void setSymbol(String symbol, boolean isGuess) {
-        if (isGuess) {
-            possibleSymbols.add(symbol);
-        }
+        possibleSymbols.clear();
         this.symbol = symbol;
         this.isGuess = isGuess;
+        this.isEmpty = false;
     }
 
     public String getSymbol() {
@@ -36,7 +36,7 @@ public class Cell {
         if (possibleSymbols.isEmpty()) {
             return null;
         } else {
-            return possibleSymbols.remove();
+            return possibleSymbols.remove(0);
         }
     }
 
@@ -46,13 +46,33 @@ public class Cell {
         }
     }
 
-    public void addPossibleSymbol(ArrayList<String> symbols) {
+    public void addAllPossibleSymbols(ArrayList<String> symbols) {
+        possibleSymbols.clear();
         for (String s : symbols) {
             if (!possibleSymbols.contains(s)) {
                 possibleSymbols.add(s);
             }
         }
     }
+
+    public void removePossibility(String symbol) {
+        possibleSymbols.remove(symbol);
+    }
+
+    public void removeAllPossibilities(ArrayList<String> symbols) {
+        possibleSymbols.removeAll(symbols);
+    }
+
+    public void emptyCell() {
+        symbol = "-";
+        isEmpty = true;
+    }
+
+    public ArrayList<String> getPossibleSymbols() { return possibleSymbols; }
+
+    public boolean isPossible(String symbol) { return possibleSymbols.contains(symbol); }
+
+    public int numPossibilities() { return possibleSymbols.size(); }
 
     public boolean isEmpty() {
         return isEmpty;
@@ -64,5 +84,15 @@ public class Cell {
     @Override
     public String toString() {
         return symbol;
+    }
+
+    @Override
+    public boolean equals(Object object) {
+        return object instanceof Cell && !isEmpty && Objects.equals(((Cell) object).symbol, symbol);
+    }
+
+    @Override
+    public int hashCode() {
+        return symbol.hashCode();
     }
 }

@@ -1,6 +1,8 @@
 package cs5700.hw4.sudoku;
 
+
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 
 public class Board {
 
@@ -16,6 +18,10 @@ public class Board {
 
     private int size;
 
+    private int sqrtSize;
+
+    private boolean isSolved;
+
     private Board() {}
 
     public static Board getInstance() {
@@ -25,64 +31,33 @@ public class Board {
         return instance;
     }
 
-    public void initBoard(ArrayList<ArrayList<Cell>> puzzle, ArrayList<String> symbols) {
-        this.size = puzzle.size();
-        this.symbols = symbols;
+    public void initBoard(
+            int size, LinkedHashSet symbols, LinkedHashSet[] rows, LinkedHashSet[] cols, LinkedHashSet[][] blocks) {
+        this.size = size;
+        this.sqrtSize = (int) Math.sqrt(size);
+        this.symbols.addAll(symbols);
+        this.isSolved = false;
 
-        initRowsAndCols(puzzle);
-        initBlocks(puzzle);
-    }
-
-    private void initRowsAndCols(ArrayList<ArrayList<Cell>> puzzle) {
         for (int i = 0; i < size; i++) {
-            columns.add(new Column(puzzle.get(i), i));
-
-            ArrayList<Cell> row = new ArrayList<>();
-            for (int j = 0; j < size; j++) {
-                row.add(puzzle.get(j).get(i));
-            }
-            rows.add(new Row(row, i));
+            this.rows.add(new Row(rows[i], i));
+            this.columns.add(new Column(cols[i], i));
         }
-    }
 
-    private void initBlocks(ArrayList<ArrayList<Cell>> puzzle) {
-        int colCount = 0;
-        int rowCount = 0;
-
-        for (int k = 1; k <= size; k ++) {
-            ArrayList<Cell> block = new ArrayList<>();
-
-            for (int i = (int) (Math.sqrt(size) * rowCount); i < Math.sqrt(size) * (rowCount + 1); i++) {
-                for (int j = (int) (Math.sqrt(size) * colCount); j < Math.sqrt(size) * (colCount + 1); j++) {
-                    block.add(puzzle.get(j).get(i));
-                }
-            }
-
-            blocks.add(new Block(block, blocks.size() + 1));
-            colCount++;
-
-            if (k % Math.sqrt(size) == 0) {
-                rowCount++;
-                colCount = 0;
+        for (int i = 0; i < sqrtSize; i++) {
+            LinkedHashSet b = null;
+            for (int j = 0; j < sqrtSize; j++) {
+                b = blocks[j][i];
+                this.blocks.add(new Block(b, i));
             }
         }
     }
 
     public ArrayList<String> getSymbols() {
-        return symbols;
+        return (ArrayList<String>) symbols.clone();
     }
 
     private boolean outOfRange(int i) {
         return i < 0 || i >= size;
-    }
-
-    public boolean isValidSymbol(String symbol) {
-        for (int i = 0; i < size; i++) {
-            if (symbols.get(i).toString().equals(symbol)) {
-                return true;
-            }
-        }
-        return false;
     }
 
     public int getSize() {
@@ -101,6 +76,19 @@ public class Board {
         return outOfRange(index) ? null : columns.get(index);
     }
 
+    public int getBlockIndex(int col, int row) {
+        return (row / sqrtSize) * sqrtSize + col / sqrtSize;
+    }
+
+    public boolean isSolved() {
+        return isSolved;
+    }
+
+    public void setSolved(boolean solved) {
+        isSolved = solved;
+    }
+
+    @Override
     public String toString() {
         StringBuilder board = new StringBuilder();
         for (Row r : rows) {
